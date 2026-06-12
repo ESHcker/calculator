@@ -30,7 +30,9 @@ function operate(){
         }
         number1 = result;
         operateDoneBefore = true;
+        console.log(operateDoneBefore);
         resetCalculator("semi");
+        displayToUser(number1);
     } 
 }
 
@@ -59,10 +61,12 @@ function updateOperator(operatorToUpdate){
 
 function displayToUser(elementToDisplay){
     let displayToUse = document.getElementById("display");
-    if(elementToDisplay == ""){    
+    if(elementToDisplay == "" || displayToUse.textContent === "0"){    
         displayToUse.textContent = elementToDisplay;
-    }else{
+    }else if(elementToDisplay != "" && operateDoneBefore === false){
         displayToUse.textContent += elementToDisplay;
+    }else if(elementToDisplay != "" && operateDoneBefore === true){
+        displayToUse.textContent += "=" + elementToDisplay;
     }
 }
 
@@ -73,9 +77,9 @@ function resetCalculator(typeOfClear){
     if(typeOfClear === "All"){
         number1 = "";
         operateDoneBefore = false;
-    }
-    if(typeOfClear === "semi"){
-        displayToUser(number1);
+        displayToUser(0);
     }
 }
+
+displayToUser(0);
 
