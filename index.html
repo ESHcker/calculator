@@ -15,32 +15,30 @@
             <p id="display"></p>
         </div>
         <div id="buttonsContainer">
-            <div id="digitsContainer">
+                <div id="row">
+                    <button id="clear" onclick="resetCalculator('All')">C</button>
+                    <button id="operator" onclick="updateOperator('/')">/</button>
+                    <button id="operator" onclick="updateOperator('x')">x</button>
+                </div>
                 <div id="row">
                     <button id="digit" onclick="updateDigit(1)">1</button>
                     <button id="digit" onclick="updateDigit(2)">2</button>
                     <button id="digit" onclick="updateDigit(3)">3</button>
-                    <button id="digit" onclick="updateDigit(3)">3</button>
+                    <button id="operator" onclick="updateOperator('+')">+</button>
                 </div>
                 <div id="row">
                     <button id="digit" onclick="updateDigit(4)">4</button>
                     <button id="digit" onclick="updateDigit(5)">5</button>
                     <button id="digit" onclick="updateDigit(6)">6</button>
+                    <button id="operator" onclick="updateOperator('-')">-</button>
                 </div>
                 <div id="row">
                     <button id="digit" onclick="updateDigit(7)">7</button>
                     <button id="digit" onclick="updateDigit(8)">8</button>
                     <button id="digit" onclick="updateDigit(9)">9</button>
+                    <button id="result" onclick="operate()">=</button>
+                    
                 </div>
-            </div>
-            <div id="operatorsContainer">
-                <button id="operatorAdd" onclick="updateOperator('+')">+</button>
-                <button id="operatorSubtract" onclick="updateOperator('-')">-</button>
-                <button id="operatorMultiply" onclick="updateOperator('x')">x</button>
-                <button id="operatorDivide" onclick="updateOperator('/')">/</button>
-                <button id="operate" onclick="operate()">=</button>
-                <button id="clear" onclick="resetCalculator('All')">clear</button>
-            </div>
         </div>
     </div>
 </body>

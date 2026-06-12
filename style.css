@@ -1,0 +1,85 @@
+body{
+    background-color: #A1241B;
+}
+
+#presentation{
+    color: white;
+    text-align: center;
+}
+
+#title{
+    color: white;
+    text-align: center;
+}
+
+#calculatorContainer{
+    border: medium solid dodgerblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    margin: auto;
+    padding: 10px;
+    background-color: #fceb04;
+}
+
+#displayContainer{
+    border: thin solid rgb(8, 165, 212);
+    width: 570px;
+    height: 70px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 15px;
+    text-align: center;
+    padding: 0;
+}
+
+#display{
+    text-align: right;
+    margin: 15px;
+    font-size: 40px;
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+#buttonContainer{
+    width: 200px;
+    display: flex;
+}
+
+#row{
+    padding: 2px 3px;
+}
+
+#digit, 
+#operator,
+#result,
+#clear{
+    width: 140px;
+    height: 70px;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 25px;
+    font-family: "Times New Roman", Times, serif;
+}
+
+#digit{
+    background-color:dodgerblue;
+}
+
+#operator{
+    background-color:aquamarine;
+    font-size: 25px;
+    color: rgb(0, 0, 0);
+}
+
+#result{
+    background-color:crimson;
+    color: white;
+}
+
+#clear{
+    background-color: #0066ff;
+    width: 285px;
+    color: white;
+}
